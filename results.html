@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Results for: {{ product }}</h1>
+
+    <ul>
+        {% for item in prices %}
+        <li>
+            <a href="{{ item.link }}" target="_blank">{{ item.title }}</a> <br>
+            {{ item.store }} - {{ item.price }}
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+
+    <br><a href="/">🔙 Take another picture</a>
+</body>
+</html>
+<!-- Results for "Milk":
+
+Great Value Whole Milk, 1 gal - $3.29 [View on Walmart]
+
+Horizon Organic Milk, 1/2 gal - $4.89 [View on Walmart]
+
+Silk Almond Milk Original, 1/2 gal - $3.29 [View on Walmart]
+-->
