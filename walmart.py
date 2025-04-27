@@ -15,7 +15,7 @@ def search_walmart(product_name):
     products = []
     if "organic_results" in data:
         x=0
-        for item in data["organic_results"][:8]:  # top 8 results
+        for item in data["organic_results"][:3]:  # top 8 results
             title = item.get("title", "No Title")
             price = item.get("primary_offer", {}).get("offer_price", "No Price")
             link = item.get("product_page_url", "#")

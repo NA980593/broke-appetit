@@ -177,7 +177,7 @@ function displayWalmartResults(results) {
     Object.keys(results).forEach((ingredientKey, index) => {
         const ingredientName = ingredientInputsContainer.querySelectorAll('input[type="text"]')[index]?.value || `Ingredient ${index + 1}`;
         const ingredientSection = document.createElement('div');
-        ingredientSection.innerHTML = `<h3>Items for: ${ingredientName}</h3>`;
+        ingredientSection.innerHTML = `<h3>Items for: ${ingredientKey}</h3>`;
 
         results[ingredientKey].forEach((ingredientItems, index) => {
             const itemCard = document.createElement('div');
