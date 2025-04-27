@@ -1,0 +1,207 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Elegant body font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px; /* Increased padding */
+    background-color: #f4f1eb; /* Soft, warm background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+    color: #5d4037; /* Deep, warm brown */
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+     border-bottom: 2px solid #d7ccc8; /* Subtle separator */
+     padding-bottom: 8px;
+     margin-bottom: 20px;
+     width: 100%; /* Ensure border spans the width */
+     box-sizing: border-box;
+}
+
+div {
+    background-color: #ffffff;
+    padding: 25px; /* Increased padding */
+    margin-bottom: 30px; /* Increased margin */
+    border-radius: 10px; /* Softened corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 100%;
+    max-width: 800px; /* Wider max width */
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400; /* Lighter font weight */
+    color: #5d4037; /* Match heading color */
+    font-size: 1.1em;
+}
+
+input[type="file"],
+input[type="text"] {
+    padding: 12px;
+    margin-right: 15px; /* Increased margin */
+    border: 1px solid #d7ccc8; /* Soft border color */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #a1887f; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(161, 136, 127, 0.3);
+}
+
+
+button {
+    padding: 12px 25px; /* Increased padding */
+    background-color: #8d6e63; /* Muted button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-size: 1em;
+    font-weight: 400; /* Lighter font weight */
+    text-transform: none; /* No uppercase */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover:not(:disabled) {
+    background-color: #6d4c41; /* Darker on hover */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+ button:active:not(:disabled) {
+    transform: translateY(1px); /* Slight press down */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+button:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#ingredientInputsContainer div,
+#selectedItemsList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; /* Increased margin */
+    padding: 10px; /* Increased padding */
+    background-color: #efebe9; /* Very light background */
+    border-radius: 5px;
+    border: 1px solid #d7ccc8;
+}
+
+ #ingredientInputsContainer input[type="text"] {
+    flex-grow: 1;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+}
+
+
+#walmartResultsContainer .ingredient-section {
+     margin-top: 25px; /* Increased margin */
+     padding-top: 20px; /* Increased padding */
+     border-top: 1px solid #d7ccc8; /* Match border color */
+}
+
+#walmartResultsContainer .ingredient-section h3 {
+    margin-top: 0;
+    color: #6d4c41; /* Match button color */
+    margin-bottom: 15px;
+}
+
+
+#walmartResultsContainer .item-card {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin: 12px 0; /* Increased margin */
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#walmartResultsContainer .item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+#walmartResultsContainer .item-card h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for item names */
+    font-weight: 500;
+}
+
+#walmartResultsContainer .item-card p {
+    margin-bottom: 10px; /* Increased margin */
+    font-size: 0.95em; /* Slightly larger font */
+    color: #555;
+}
+
+#selectedItemsList {
+    list-style: none;
+    padding: 0;
+}
+
+#selectedItemsList li {
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#selectedItemsList li:last-child {
+    border-bottom: none;
+}
+
+#selectedItemsList li button {
+     padding: 6px 12px; /* Adjusted delete button size */
+     background-color: #e57373; /* Softer red for delete */
+     color: white;
+     box-shadow: none;
+     text-transform: none;
+     font-weight: normal;
+     margin-left: 10px; /* Added margin back */
+}
+
+ #selectedItemsList li button:hover:not(:disabled) {
+     background-color: #ef5350; /* Slightly darker red on hover */
+     transform: none;
+     box-shadow: none;
+ }
+
+
+#totalPrice {
+    font-weight: 700; /* Bolder font weight */
+    color: #5d4037; /* Match heading color */
+    font-size: 1.3em; /* Larger font */
+    margin-top: 20px; /* Space above total */
+}
+
+#sendIngredientsBtn {
+    margin-left:20px;
+}

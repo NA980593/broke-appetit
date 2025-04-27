@@ -7,7 +7,6 @@ from walmart import search_walmart
 app = Flask(__name__)
 
 
-API_KEY = "AIzaSyAemGVRAReLykDaF6iKIwQf1CmPRHTnvbI"
 # API_KEY = os.environ.get("GOOGLE_API_KEY") # Get API key from environment variable
 if not API_KEY:
     raise ValueError("GOOGLE_API_KEY environment variable not set")
