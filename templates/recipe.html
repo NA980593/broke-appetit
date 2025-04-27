@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Ingredient Shopping</title>
+    </head>
+<body>
+
+    <h1>Recipe Ingredient Price Calculator</h1>
+
+    <div>
+        <label for="recipeImage">Upload Recipe Image:</label>
+        <input type="file" id="recipeImage" accept="image/*">
+        <button id="processImageBtn" disabled>Process Image</button>
+    </div>
+
+    <div id="ingredientInputsContainer">
+        <h2>Ingredients</h2>
+        </div>
+
+    <div>
+        <button id="addIngredientBtn">Add Ingredient</button>
+    </div>
+
+    <div>
+        <button id="sendIngredientsBtn" disabled>Send</button>
+    </div>
+
+    <div id="walmartResultsContainer">
+        <h2>Walmart Items</h2>
+        </div>
+
+    <div id="selectedItemsContainer">
+        <h2>Selected Items</h2>
+        <ul id="selectedItemsList">
+            </ul>
+        <p>Total Price: $<span id="totalPrice">0.00</span></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/recipe-calculator.js') }}"></script>
+
+</body>
+</html>

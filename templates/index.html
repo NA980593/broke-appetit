@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Food Price Finder</title>
 </head>
 <body>
-    <h1>Welcome to the Homepage</h1>
-    <p>This is the main page of the food money app.</p>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
+
+    <h1>Food Price Finder</h1>
+
+    <div id="statusArea">
+        <p id="statusText"></p>
+    </div>
+
+    <div>
+        <h2>Webcam Input</h2>
+        <video id="webcamVideo" width="320" height="240" autoplay></video>
+        <button id="captureButton">Capture Food Image</button>
+        <canvas id="capturedCanvas" width="320" height="240" style="display: none;"></canvas>
+    </div>
+
+    <div>
+        <h2>Food Item</h2>
+        <p>Or manually enter the food item:</p>
+        <input type="text" id="foodInput" placeholder="Enter food name">
+        <button id="searchButton" disabled>Find Prices</button>
+    </div>
+
+    <div>
+        <h2>Prices</h2>
+        <div id="results">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/food-price-checker.js') }}"></script>
+
 </body>
 </html>
