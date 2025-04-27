@@ -1,6 +1,7 @@
+import os
 import requests
 
-# SERPAPI_KEY = os.environ.get("SERPAPI") # Get API key from environment variable
+SERPAPI_KEY = os.environ.get("SERPAPI") # Get API key from environment variable
 
 
 def search_walmart(product_name):

@@ -6,8 +6,8 @@ from walmart import search_walmart
 
 app = Flask(__name__)
 
+API_KEY = os.environ.get("GOOGLE_API_KEY") # Get API key from environment variable
 
-# API_KEY = os.environ.get("GOOGLE_API_KEY") # Get API key from environment variable
 if not API_KEY:
     raise ValueError("GOOGLE_API_KEY environment variable not set")
 
@@ -45,11 +45,11 @@ def walmart():
     return jsonify(results), 200
 
 
-@app.route('/')
+@app.route('/old')
 def index():
     return render_template('index.html')
 
-@app.route('/recipe')
+@app.route('/')
 def recipe():
     return render_template('recipe.html')
 

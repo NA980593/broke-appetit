@@ -191,7 +191,7 @@ function displayWalmartResults(results) {
             itemPrice.textContent = `Price: $${ingredientItems.price.toFixed(2)}`;
 
             const itemDescription = document.createElement('p');
-            itemDescription.innerHTML = `<a href="${ingredientItems.description}">Link</a>`;
+            itemDescription.innerHTML = `<a href="${ingredientItems.description}" target="_blank">Link</a>`;
 
             const addButton = document.createElement('button');
             addButton.textContent = 'Add to List';
